@@ -38,6 +38,23 @@ func superAdd(numbers ...int) int {
 	return total
 }
 
+func canIDrink(age int) bool {
+	if koreanAge := age + 2; koreanAge < 20 { // if 조건문, if문 안에서만 사용하기 위해 변수를 생성할 수 있음
+		return false
+	}
+	return true
+}
+
+func canIDrink2(age int) bool {
+	switch koreanAge := age + 2; koreanAge { // switch 조건문, if-else 구문이 난무하는 것을 막아줌
+	case 10:
+		return false
+	case 20:
+		return true
+	}
+	return false
+}
+
 func main() { // go 프로그램의 시작점(필수!!)
 	fmt.Println("Hello World!")
 
@@ -66,4 +83,7 @@ func main() { // go 프로그램의 시작점(필수!!)
 
 	result := superAdd(1, 2, 3, 4, 5, 6)
 	fmt.Println(result)
+
+	fmt.Println(canIDrink(16))
+	fmt.Println(canIDrink2(18))
 }
