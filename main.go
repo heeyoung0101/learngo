@@ -28,6 +28,16 @@ func lenAndUpper2(name string) (length int, uppercase string) { // 두 개의 �
 	return // 두 개의 변수 리턴(명시하지 않아도 됨)
 }
 
+func superAdd(numbers ...int) int {
+	total := 0
+	// 같은 방식 for i:= 0; i < len(numbers); i++
+	for _, number := range numbers { // 반복문 index와 number, range는 for안에서만 작동
+		fmt.Println(number)
+		total += number
+	}
+	return total
+}
+
 func main() { // go 프로그램의 시작점(필수!!)
 	fmt.Println("Hello World!")
 
@@ -53,4 +63,7 @@ func main() { // go 프로그램의 시작점(필수!!)
 
 	totalLength, up := lenAndUpper2("gwidong")
 	fmt.Println(totalLength, up) // 7 GWIDONG
+
+	result := superAdd(1, 2, 3, 4, 5, 6)
+	fmt.Println(result)
 }
