@@ -32,4 +32,7 @@ func main() { // go 프로그램의 시작점(필수!!)
 	// array, slice
 	theory.GetArray()
 	theory.GetSlice()
+
+	// map
+	theory.GetMap()
 }
