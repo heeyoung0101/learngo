@@ -25,4 +25,13 @@ func main() { // go 프로그램의 시작점(필수!!)
 	// if, switch
 	theory.GetIf()
 	theory.GetSwitch()
+
+	// pointer
+	a := 1
+	b := &a // a의 주소를 b에 저장
+	a = 2
+	fmt.Println(&a, b) // 0x14000110040 0x14000110040
+	fmt.Println(a, *b) // 2 2
+	*b = 20
+	fmt.Println(a)
 }
